@@ -297,6 +297,16 @@ An example of using Code's workspace configuration to ignore files by glob might
 }
 ```
 
+Allow only `*md` or `*.markdown` files to be checked, VS Code/ VS Codium, Editor (profile) wide:
+E.g in : `$HOME/.config/VSCodium/User/profiles/[HashOfYourProfile]/settings.json`
+
+```json
+"markdownlint.ignore": [
+    "!**/*.{md,markdown}",    # enables `*md` or `*.markdown`
+    "**/.*"                   # ignores all dot files/dirs beeing checked
+]
+```
+
 Or to ignore files by referencing a different file:
 
 ```json
